@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CadastraCliente</class>
+ <widget class="QDialog" name="CadastraFornecedor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>601</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastra Cliente</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="3">
+    <widget class="QTableView" name="tableView">
+     <property name="alternatingRowColors">
+      <bool>false</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::DotLine</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="cornerButtonEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_11">
+       <property name="maximumSize">
+        <size>
+         <width>21</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="icons/icons.qrc">:/new/prefix1/Search-icon.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="filtro"/>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <layout class="QFormLayout" name="formLayout_3">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="minimumSize">
+        <size>
+         <width>31</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Nome:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="nome"/>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>CPF:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="cpf"/>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>RG:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="rg"/>
+     </item>
+    </layout>
+   </item>
+   <item row="5" column="0">
+    <layout class="QFormLayout" name="formLayout_5">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Data de Nascimento:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QDateEdit" name="data"/>
+     </item>
+    </layout>
+   </item>
+   <item row="5" column="2">
+    <layout class="QFormLayout" name="formLayout_4">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="maximumSize">
+        <size>
+         <width>100</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Estado:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="estado">
+       <property name="currentIndex">
+        <number>-1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Acre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Alagoas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Amapá</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Amazonas</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bahia</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ceará</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Distrito Federal</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Espirito Santo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Goiás</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Maranhão</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mato Grosso</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mato Grosso do Sul</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Minas Gerais</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pará</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Paraíba</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Paraná</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pernambuco</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Piauí</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rio de Janeiro</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rio Grande do Norte</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rio Grande do Sul</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rondônia</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Roraima</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Santa Catarina</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>São Paulo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sergipe</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Tocantins</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="6" column="0">
+    <layout class="QFormLayout" name="formLayout_6">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Endereço:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="endereco"/>
+     </item>
+    </layout>
+   </item>
+   <item row="6" column="2">
+    <layout class="QFormLayout" name="formLayout_9">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Cidade:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="cidade"/>
+     </item>
+    </layout>
+   </item>
+   <item row="7" column="0">
+    <layout class="QFormLayout" name="formLayout_7">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Telefone Celular:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="celular"/>
+     </item>
+    </layout>
+   </item>
+   <item row="7" column="2">
+    <layout class="QFormLayout" name="formLayout_8">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Telefone Fixo:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="fixo"/>
+     </item>
+    </layout>
+   </item>
+   <item row="8" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="9" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Novo Cliente</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Remover</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="9" column="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources>
+  <include location="icons/icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>CadastraCliente</receiver>
+   <slot>submit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>343</x>
+     <y>437</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>337</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>CadastraCliente</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>441</x>
+     <y>439</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>426</x>
+     <y>408</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>CadastraCliente</receiver>
+   <slot>removeCliente()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>146</x>
+     <y>406</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CadastraCliente</receiver>
+   <slot>novoCliente()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>442</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>27</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>submit()</slot>
+  <slot>filtro()</slot>
+  <slot>removeCliente()</slot>
+  <slot>novoCliente()</slot>
+ </slots>
+</ui>
+
