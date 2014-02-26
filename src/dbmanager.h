@@ -11,8 +11,11 @@ class DBManager
         bool openDB();
         QSqlError lastError();
         bool createPersonTable();
+        ~DBManager();
 
     private:
         QSqlDatabase db;
 };
+
+
 #endif // DBMANAGER_H

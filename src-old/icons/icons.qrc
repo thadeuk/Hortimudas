@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>Bank-grayscale64.png</file>
+        <file>Bank-hot64.png</file>
+        <file>Piggy-Bank-grayscale64.png</file>
+        <file>Piggy-Bank-USD64.png</file>
+        <file>Search-icon.png</file>
+    </qresource>
+</RCC>

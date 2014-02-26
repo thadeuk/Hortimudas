@@ -2,11 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QMessageBox>
 #include <QMdiArea>
-#include <cadastracliente.h>
-#include <cadastrafornecedor.h>
-#include <pagar/cadastracontaspagar.h>
+#include <customer.h>
 
 namespace Ui {
 class MainWindow;
@@ -15,22 +12,18 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    CadastraCliente *cadastraCliente;
-    CadastraFornecedor *cadastraFornecedor;
-    CadastraContasPagar *cadastraContasaPagar;
-    QMdiArea *workspace;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    
+
+private slots:
+    void onCustomerWindow();
+
 private:
     Ui::MainWindow *ui;
-
-public slots:
-    void openCadastraCliente();
-    void openCadastraFornecedor();
-    void openContasPagar();
+    QMdiArea *workspace;
+    Customer *customer;
 };
 
 #endif // MAINWINDOW_H
