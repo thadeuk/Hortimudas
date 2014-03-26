@@ -5,5 +5,9 @@
         <file>icons/Piggy-Bank-grayscale64.png</file>
         <file>icons/Bank-grayscale64.png</file>
         <file>icons/Bank-hot64.png</file>
+        <file>icons/Truck-icon.png</file>
+        <file>icons/clientes.png</file>
+        <file>icons/Tractor_icon.svg</file>
+        <file>icons/User-Group-icon.png</file>
     </qresource>
 </RCC>

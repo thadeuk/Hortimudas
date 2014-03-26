@@ -20,6 +20,8 @@ public:
 private slots:
     void onCustomerWindow();
 
+    void on_actionFornecedores_triggered();
+
 private:
     Ui::MainWindow *ui;
     QMdiArea *workspace;

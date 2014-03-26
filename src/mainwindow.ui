@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>575</width>
+    <height>410</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -11,7 +19,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>462</width>
+     <width>575</width>
      <height>20</height>
     </rect>
    </property>
@@ -45,14 +53,22 @@
      <height>48</height>
     </size>
    </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionContas_a_Pagar"/>
+   <addaction name="actionCliente_2"/>
+   <addaction name="actionFornecedores"/>
    <addaction name="actionContas_a_Receber"/>
+   <addaction name="actionContas_a_Pagar"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionSair">
@@ -66,6 +82,9 @@
    </property>
   </action>
   <action name="actionFornecedor">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Fornecedor</string>
    </property>
@@ -97,6 +116,24 @@
    </property>
    <property name="toolTip">
     <string>Contas a Receber</string>
+   </property>
+  </action>
+  <action name="actionCliente_2">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/icons/User-Group-icon.png</normaloff>:/new/prefix1/icons/User-Group-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clientes</string>
+   </property>
+  </action>
+  <action name="actionFornecedores">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/icons/Truck-icon.png</normaloff>:/new/prefix1/icons/Truck-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fornecedores</string>
    </property>
   </action>
  </widget>
