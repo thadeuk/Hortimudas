@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Hortimudas 1.0</string>
   </property>
   <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
@@ -34,7 +34,7 @@
      <string>Cadastro</string>
     </property>
     <addaction name="actionCliente"/>
-    <addaction name="actionFornecedor"/>
+    <addaction name="actionFornecedores"/>
    </widget>
    <widget class="QMenu" name="menuAjuda">
     <property name="title">
@@ -65,28 +65,16 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionCliente_2"/>
+   <addaction name="actionCliente"/>
    <addaction name="actionFornecedores"/>
    <addaction name="actionContas_a_Receber"/>
    <addaction name="actionContas_a_Pagar"/>
+   <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionSair">
    <property name="text">
     <string>Sair</string>
-   </property>
-  </action>
-  <action name="actionCliente">
-   <property name="text">
-    <string>Cliente</string>
-   </property>
-  </action>
-  <action name="actionFornecedor">
-   <property name="checkable">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Fornecedor</string>
    </property>
   </action>
   <action name="actionSobre">
@@ -118,7 +106,7 @@
     <string>Contas a Receber</string>
    </property>
   </action>
-  <action name="actionCliente_2">
+  <action name="actionCliente">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/new/prefix1/icons/User-Group-icon.png</normaloff>:/new/prefix1/icons/User-Group-icon.png</iconset>
@@ -141,24 +129,7 @@
  <resources>
   <include location="icons.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>actionCliente</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>onCustomerWindow()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>293</x>
-     <y>173</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
  <slots>
   <slot>onCustomerWindow()</slot>
  </slots>

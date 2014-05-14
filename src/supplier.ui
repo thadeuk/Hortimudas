@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Customer</class>
- <widget class="QDialog" name="Customer">
+ <class>Supplier</class>
+ <widget class="QDialog" name="Supplier">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>700</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Clientes</string>
+   <string>Fornecedores</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -166,9 +166,6 @@
        <property name="displayFormat">
         <string>dd/MM/yyyy</string>
        </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
       </widget>
      </item>
     </layout>
@@ -176,14 +173,14 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="addCustomer">
+      <widget class="QPushButton" name="addSupplier">
        <property name="text">
         <string>Adicionar</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="delCustomer">
+      <widget class="QPushButton" name="delSupplier">
        <property name="text">
         <string>Deletar</string>
        </property>
@@ -213,6 +210,22 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>tableView</tabstop>
+  <tabstop>filter</tabstop>
+  <tabstop>name</tabstop>
+  <tabstop>cpf</tabstop>
+  <tabstop>rg</tabstop>
+  <tabstop>city</tabstop>
+  <tabstop>state</tabstop>
+  <tabstop>address</tabstop>
+  <tabstop>birthday</tabstop>
+  <tabstop>mobilePhoneNumber</tabstop>
+  <tabstop>phoneNumber</tabstop>
+  <tabstop>addSupplier</tabstop>
+  <tabstop>delSupplier</tabstop>
+  <tabstop>closeButton</tabstop>
+ </tabstops>
  <resources>
   <include location="icons.qrc"/>
  </resources>
@@ -220,7 +233,7 @@
   <connection>
    <sender>closeButton</sender>
    <signal>clicked()</signal>
-   <receiver>Customer</receiver>
+   <receiver>Supplier</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">

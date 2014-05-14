@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QMdiArea>
 #include <customer.h>
+#include <supplier.h>
+#include <accounts_payable.h>
 
 namespace Ui {
 class MainWindow;
@@ -18,14 +20,21 @@ public:
     ~MainWindow();
 
 private slots:
-    void onCustomerWindow();
 
     void on_actionFornecedores_triggered();
+
+    void on_actionCliente_triggered();
+
+    void on_actionContas_a_Receber_triggered();
+
+    void on_actionContas_a_Pagar_triggered();
 
 private:
     Ui::MainWindow *ui;
     QMdiArea *workspace;
     Customer *customer;
+    Supplier *supplier;
+    AccountsPayable *accountsPayable;
 };
 
 #endif // MAINWINDOW_H

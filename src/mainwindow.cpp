@@ -17,9 +17,30 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::onCustomerWindow()
+
+void MainWindow::on_actionFornecedores_triggered()
+{
+    supplier = new Supplier(this);
+    workspace->addSubWindow(supplier);
+    supplier->show();
+}
+
+void MainWindow::on_actionCliente_triggered()
 {
     customer = new Customer(this);
     workspace->addSubWindow(customer);
     customer->show();
+
+}
+
+void MainWindow::on_actionContas_a_Receber_triggered()
+{
+
+}
+
+void MainWindow::on_actionContas_a_Pagar_triggered()
+{
+    accountsPayable = new AccountsPayable(this);
+    workspace->addSubWindow(accountsPayable);
+    accountsPayable->show();
 }

@@ -15,14 +15,23 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     customer.cpp \
-    dbmanager.cpp
+    dbmanager.cpp \
+    supplier.cpp \
+    accounts_receivable.cpp \
+    accounts_payable.cpp
 
 HEADERS  += mainwindow.h \
     customer.h \
-    dbmanager.h
+    dbmanager.h \
+    supplier.h \
+    accounts_receivable.h \
+    accounts_payable.h
 
 FORMS    += mainwindow.ui \
-    customer.ui
+    customer.ui \
+    supplier.ui \
+    accounts_receivable.ui \
+    accounts_payable.ui
 
 RESOURCES += \
     icons.qrc

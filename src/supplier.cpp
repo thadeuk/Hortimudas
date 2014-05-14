@@ -1,11 +1,11 @@
-#include "customer.h"
-#include "ui_customer.h"
+#include "supplier.h"
+#include "ui_supplier.h"
 #include <QSqlRecord>
 #include <QDebug>
 
-Customer::Customer(QWidget *parent) :
+Supplier::Supplier(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Customer)
+    ui(new Ui::Supplier)
 {
     ui->setupUi(this);
     this->setAttribute(Qt::WA_DeleteOnClose);
@@ -17,11 +17,11 @@ Customer::Customer(QWidget *parent) :
 
 }
 
-void Customer::CreateModel()
+void Supplier::CreateModel()
 {
     model = new QSqlTableModel(this, QSqlDatabase::database());
     model->setEditStrategy(QSqlTableModel::OnFieldChange);
-    model->setTable("clientes");
+    model->setTable("fornecedores");
     model->select();
     model->setHeaderData(1, Qt::Horizontal, tr("Nome"));
 
@@ -32,7 +32,7 @@ void Customer::CreateModel()
     proxyModel->setFilterKeyColumn(1);
 }
 
-void Customer::CreateTable()
+void Supplier::CreateTable()
 {
     tableView = ui->tableView;
 
@@ -46,7 +46,7 @@ void Customer::CreateTable()
     tableView->selectRow(0);
 }
 
-void Customer::MapFields()
+void Supplier::MapFields()
 {
     mapper = new QDataWidgetMapper(this);
     mapper->setSubmitPolicy(QDataWidgetMapper::AutoSubmit);
@@ -64,7 +64,7 @@ void Customer::MapFields()
     mapper->setCurrentIndex(ui->tableView->currentIndex().row());
 }
 
-void Customer::CreateSignals()
+void Supplier::CreateSignals()
 {
     connect(
       tableView->selectionModel(),
@@ -73,20 +73,20 @@ void Customer::CreateSignals()
      );
 }
 
-void Customer::selectedRow(const QItemSelection &selected, const QItemSelection &deselect)
+void Supplier::selectedRow(const QItemSelection &selected, const QItemSelection &deselect)
 {
     if (!selected.indexes().empty())
         mapper->setCurrentModelIndex(selected.indexes().first());
 }
 
 
-Customer::~Customer()
+Supplier::~Supplier()
 {
     this->parentWidget()->close();
     delete ui;
 }
 
-void Customer::on_addCustomer_clicked()
+void Supplier::on_addSupplier_clicked()
 {
     QSqlRecord rec( model->record() );
     model->insertRecord(-1, rec );
@@ -95,14 +95,15 @@ void Customer::on_addCustomer_clicked()
     tableView->selectRow(0);
 }
 
-void Customer::on_delCustomer_clicked()
+void Supplier::on_delSupplier_clicked()
 {
     int row = tableView->currentIndex().row();
     proxyModel->removeRow(row);
     model->select();
 }
 
-void Customer::on_filter_textChanged(const QString &str)
+void Supplier::on_filter_textChanged(const QString &str)
 {
     proxyModel->setFilterRegExp(str);
 }
+
